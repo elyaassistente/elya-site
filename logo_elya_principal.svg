@@ -1,0 +1,31 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Principal ELYA - Elegante, Moderno, Minimalista -->
+  
+  <!-- Símbolo - Folha estilizada representando crescimento -->
+  <g id="simbolo">
+    <!-- Círculo base - representa organização e completude -->
+    <circle cx="40" cy="60" r="32" stroke="#2C5F7F" stroke-width="2" fill="none" opacity="0.3"/>
+    
+    <!-- Folha crescente - representa crescimento -->
+    <path d="M 25 60 Q 40 30, 55 60 Q 40 75, 25 60" fill="#2C5F7F"/>
+    
+    <!-- Detalhe interno - nervuras da folha -->
+    <path d="M 40 45 L 40 65" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 40 50 Q 45 55, 40 60" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <path d="M 40 50 Q 35 55, 40 60" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Logotipo ELYA -->
+  <g id="texto">
+    <text x="90" y="75" font-family="'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="300" fill="#2C5F7F" letter-spacing="-2">
+      ELYA
+    </text>
+  </g>
+  
+  <!-- Tagline -->
+  <g id="tagline">
+    <text x="90" y="92" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6B8E9F" letter-spacing="3">
+      ORGANIZA. ATENDE. CRESCE.
+    </text>
+  </g>
+</svg>

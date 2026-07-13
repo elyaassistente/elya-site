@@ -1,0 +1,33 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ícone ELYA - Para Redes Sociais e Favicon -->
+  
+  <!-- Fundo com gradiente sutil -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fbfc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C5F7F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A9B8E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="200" height="200" rx="20" fill="url(#bg-gradient)"/>
+  
+  <!-- Círculo externo -->
+  <circle cx="100" cy="100" r="65" stroke="url(#icon-gradient)" stroke-width="3" fill="none" opacity="0.3"/>
+  
+  <!-- Símbolo de crescimento -->
+  <path d="M 60 100 Q 100 40, 140 100 Q 100 140, 60 100" fill="url(#icon-gradient)"/>
+  
+  <!-- Detalhes internos -->
+  <path d="M 100 60 L 100 120" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+  <path d="M 100 70 Q 115 85, 100 100" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <path d="M 100 70 Q 85 85, 100 100" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Letra E estilizada no centro -->
+  <text x="100" y="115" font-family="'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="300" fill="#ffffff" text-anchor="middle" opacity="0.9">
+    E
+  </text>
+</svg>

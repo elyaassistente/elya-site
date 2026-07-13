@@ -1,0 +1,10 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo ELYA - Versão Minimalista (apenas texto) -->
+  
+  <text x="10" y="65" font-family="'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="200" fill="#2C5F7F" letter-spacing="-1">
+    ELYA
+  </text>
+  
+  <!-- Linha sutil abaixo -->
+  <line x1="10" y1="75" x2="260" y2="75" stroke="#2C5F7F" stroke-width="1" opacity="0.3"/>
+</svg>
