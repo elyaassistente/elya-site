@@ -1,30 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://elya.com.br/</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/quem-somos</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/como-funciona</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/servicos</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/planos</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/faq</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/depoimentos</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/contato</loc>
-  </url>
-  <url>
-    <loc>https://elya.com.br/blog</loc>
-  </url>
+  <url><loc>https://elyaassistente.github.io/elya-site/</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/quem-somos.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/como-funciona.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/servicos.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/planos.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/contato.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/faq.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/depoimentos.html</loc></url>
+  <url><loc>https://elyaassistente.github.io/elya-site/blog.html</loc></url>
 </urlset>
