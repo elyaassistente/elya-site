@@ -1,4 +1,57 @@
 (() => {
+  const consentKey = 'elya_cookie_consent';
+  const savedConsent = localStorage.getItem(consentKey);
+
+  const updateAnalyticsConsent = (choice) => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: choice === 'accepted' ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    }
+  };
+
+  if (!savedConsent) {
+    const banner = document.createElement('section');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Preferências de privacidade');
+    banner.innerHTML = `
+      <div class="cookie-banner__content">
+        <div>
+          <strong>Privacidade e cookies</strong>
+          <p>Usamos cookies de medição para entender, de forma anônima, como o site é utilizado. Você pode aceitar ou recusar. <a href="privacidade.html">Saiba mais</a>.</p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button type="button" class="cookie-button cookie-button--secondary" data-cookie-choice="rejected">Recusar</button>
+          <button type="button" class="cookie-button cookie-button--primary" data-cookie-choice="accepted">Aceitar</button>
+        </div>
+      </div>`;
+
+    banner.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-cookie-choice]');
+      if (!button) return;
+
+      const choice = button.dataset.cookieChoice;
+      localStorage.setItem(consentKey, choice);
+      updateAnalyticsConsent(choice);
+      banner.remove();
+    });
+
+    document.body.appendChild(banner);
+  } else {
+    updateAnalyticsConsent(savedConsent);
+  }
+
+  const footerBottom = document.querySelector('.footer-bottom');
+  if (footerBottom && !footerBottom.querySelector('[data-privacy-link]')) {
+    const privacy = document.createElement('p');
+    privacy.innerHTML = '<a href="privacidade.html" data-privacy-link>Política de Privacidade</a>';
+    footerBottom.appendChild(privacy);
+  }
+
   const nav = document.querySelector('nav');
   const toggle = document.querySelector('.mobile-menu-toggle');
   const links = document.querySelector('.nav-links');

@@ -7,6 +7,8 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    const analyticsConsent = localStorage.getItem('elya_cookie_consent') === 'accepted' ? 'granted' : 'denied';
+    gtag('consent', 'default', { analytics_storage: analyticsConsent, ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     gtag('js', new Date());
     gtag('config', 'G-2ENXYD4RRR');
   </script>
