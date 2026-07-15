@@ -59,13 +59,15 @@
       event.preventDefault();
 
       const formData = new FormData(contactForm);
+      const businessSelect = contactForm.querySelector('[name="negocio"]');
+      const businessLabel = businessSelect?.selectedOptions?.[0]?.textContent?.trim() || '';
       const message = [
         'Ola! Quero solicitar um diagnostico gratuito para meu negocio.',
         '',
         `Nome: ${formData.get('nome') || ''}`,
         `E-mail: ${formData.get('email') || ''}`,
         `Telefone/WhatsApp: ${formData.get('telefone') || ''}`,
-        `Tipo de negocio: ${formData.get('negocio') || ''}`,
+        `Tipo de negocio: ${businessLabel}`,
         `Mensagem: ${formData.get('mensagem') || 'Nao informado'}`
       ].join('\n');
 
