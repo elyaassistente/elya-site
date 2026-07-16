@@ -1,4 +1,101 @@
 (() => {
+  const consentKey = 'elya_cookie_consent';
+  const measurementId = 'G-2ENXYD4RRR';
+  let analyticsLoaded = false;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() {
+    window.dataLayer.push(arguments);
+  };
+
+  window.gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  const loadAnalytics = () => {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    document.head.appendChild(script);
+
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, { anonymize_ip: true });
+  };
+
+  const applyConsent = (choice) => {
+    const accepted = choice === 'accepted';
+    window.gtag('consent', 'update', {
+      analytics_storage: accepted ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    if (accepted) loadAnalytics();
+  };
+
+  const showCookieBanner = () => {
+    document.querySelector('.cookie-banner')?.remove();
+
+    const banner = document.createElement('section');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-modal', 'true');
+    banner.setAttribute('aria-label', 'Preferências de privacidade');
+    banner.innerHTML = `
+      <div class="cookie-banner__content">
+        <div>
+          <strong>Privacidade e cookies</strong>
+          <p>Usamos cookies de medição para entender, de forma anônima, como o site é utilizado. O Analytics só será carregado se você aceitar. <a href="privacidade.html">Leia a Política de Privacidade</a>.</p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button type="button" class="cookie-button cookie-button--secondary" data-cookie-choice="rejected">Recusar</button>
+          <button type="button" class="cookie-button cookie-button--primary" data-cookie-choice="accepted">Aceitar</button>
+        </div>
+      </div>`;
+
+    banner.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-cookie-choice]');
+      if (!button) return;
+
+      const choice = button.dataset.cookieChoice;
+      localStorage.setItem(consentKey, choice);
+      applyConsent(choice);
+      banner.remove();
+    });
+
+    document.body.appendChild(banner);
+  };
+
+  const savedConsent = localStorage.getItem(consentKey);
+  if (savedConsent) {
+    applyConsent(savedConsent);
+  } else {
+    showCookieBanner();
+  }
+
+  const footerBottom = document.querySelector('.footer-bottom');
+  if (footerBottom && !footerBottom.querySelector('[data-privacy-link]')) {
+    const privacy = document.createElement('p');
+    privacy.className = 'footer-privacy-links';
+    privacy.innerHTML = '<a href="privacidade.html" data-privacy-link>Política de Privacidade</a> <button type="button" class="cookie-settings-button" data-cookie-settings>Configurar cookies</button>';
+    footerBottom.appendChild(privacy);
+  }
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-cookie-settings]')) return;
+    localStorage.removeItem(consentKey);
+    window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    showCookieBanner();
+  });
+
   const nav = document.querySelector('nav');
   const toggle = document.querySelector('.mobile-menu-toggle');
   const links = document.querySelector('.nav-links');
