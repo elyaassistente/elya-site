@@ -4,7 +4,10 @@
   <url><loc>https://www.elyaassistente.com.br/quem-somos.html</loc></url>
   <url><loc>https://www.elyaassistente.com.br/como-funciona.html</loc></url>
   <url><loc>https://www.elyaassistente.com.br/servicos.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/planos.html</loc></url>
+  <url>
+    <loc>https://www.elyaassistente.com.br/planos.html</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
   <url><loc>https://www.elyaassistente.com.br/contato.html</loc></url>
   <url><loc>https://www.elyaassistente.com.br/faq.html</loc></url>
   <url><loc>https://www.elyaassistente.com.br/depoimentos.html</loc></url>
