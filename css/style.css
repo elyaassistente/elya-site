@@ -868,6 +868,62 @@ section {
   margin-top: 2px;
 }
 
+/* Alinhamento dos cards da página de planos */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.plans-grid .plan-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.plans-grid .plan-card-header {
+  display: flex;
+  flex-direction: column;
+  min-height: 190px;
+}
+
+.plans-grid .plan-price-personalized {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.plans-grid .plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex-grow: 0;
+  margin: var(--spacing-lg) 0;
+  padding: 0;
+}
+
+.plans-grid .plan-features li {
+  min-height: 2.75rem;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.plans-grid .plan-card > .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-grid .plan-card-header {
+    min-height: 0;
+  }
+}
+
 /* Tabela Comparativa de Planos */
 .comparison-table {
   width: 100%;

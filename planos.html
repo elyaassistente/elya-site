@@ -73,49 +73,46 @@
     <section class="bg-white">
       <div class="container">
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+        <div class="plans-grid">
           
           <!-- Plano Inicial -->
-          <div class="plan-card featured" style="display: flex; flex-direction: column;">
+          <div class="plan-card featured">
             <div class="selo-destaque">PLANO INICIAL</div>
-            <div class="plan-name" style="color: var(--verde-oceano);">Plano Inicial</div>
-            <p class="plan-description">Para profissionais que precisam de apoio humano na rotina de agendamentos</p>
-            <div class="plan-price">
-              R$ 497<small>/mês</small>
+            <div class="plan-card-header">
+              <div class="plan-name" style="color: var(--verde-oceano);">Plano Inicial</div>
+              <p class="plan-description">Para profissionais que precisam de apoio humano na rotina de agendamentos</p>
+              <div class="plan-price">
+                R$ 497<small>/mês</small>
+              </div>
             </div>
             
-            <ul class="plan-features" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Atendimento pelo WhatsApp</li>
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Organização de agenda</li>
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Confirmação de horários</li>
+            <ul class="plan-features">
+              <li>Atendimento pelo WhatsApp</li>
+              <li>Organização de agenda</li>
+              <li>Confirmação de horários</li>
+              <li>Atendimento humano de segunda a sexta, das 9h às 18h</li>
+              <li>Garantia de 7 dias</li>
             </ul>
 
-            <ul class="benefits-list" style="margin: 20px 0 20px 0; padding: 0 10px;">
-              <li style="min-height: 2rem; display: flex; align-items: center;">Atendimento humano de segunda a sexta, das 9h às 18h</li>
-              <li style="min-height: 2rem; display: flex; align-items: center;">Garantia de 7 dias</li>
-            </ul>
-
-            <a href="https://wa.me/5511913381160?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Plano%20Inicial%20da%20ELYA%20de%20R%24%20497%20por%20m%C3%AAs." class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer" style="margin-top: auto;">Conhecer o Plano Inicial</a>
+            <a href="https://wa.me/5511913381160?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Plano%20Inicial%20da%20ELYA%20de%20R%24%20497%20por%20m%C3%AAs." class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">Conhecer o Plano Inicial</a>
           </div>
 
           <!-- Orçamento personalizado -->
-          <div class="plan-card" style="display: flex; flex-direction: column;">
-            <div class="plan-name">Necessidade personalizada</div>
-            <p class="plan-description">Para rotinas que precisam de um escopo diferente do Plano Inicial</p>
-            <div class="plan-price" style="font-size: 2.2rem;">Sob orçamento</div>
+          <div class="plan-card">
+            <div class="plan-card-header">
+              <div class="plan-name">Necessidade personalizada</div>
+              <p class="plan-description">Para rotinas que precisam de um escopo diferente do Plano Inicial</p>
+              <div class="plan-price plan-price-personalized">A partir de R$ 300/mês por agenda adicional</div>
+            </div>
             
-            <ul class="plan-features" style="flex-grow: 1; display: flex; flex-direction: column;">
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Análise da rotina de agendamentos</li>
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Definição do escopo antes da contratação</li>
-              <li style="min-height: 2.5rem; display: flex; align-items: center;">Valor informado por escrito</li>
+            <ul class="plan-features">
+              <li>Tudo do Plano Inicial, por agenda</li>
+              <li>Valor calculado conforme número de profissionais atendidos</li>
+              <li>Escopo e valor confirmados numa conversa inicial gratuita</li>
+              <li>Sem cobranças fora do combinado</li>
             </ul>
 
-            <ul class="benefits-list" style="margin: 20px 0 20px 0; padding: 0 10px;">
-              <li style="min-height: 2rem; display: flex; align-items: center;">Sem serviços ou cobranças não combinados</li>
-              <li style="min-height: 2rem; display: flex; align-items: center;">Conversa inicial gratuita</li>
-            </ul>
-
-            <a href="https://wa.me/5511913381160?text=Ol%C3%A1!%20Gostaria%20de%20explicar%20minha%20rotina%20e%20solicitar%20um%20or%C3%A7amento%20personalizado%20da%20ELYA." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer" style="margin-top: auto;">Solicitar orçamento</a>
+            <a href="https://wa.me/5511913381160?text=Ol%C3%A1!%20Gostaria%20de%20explicar%20minha%20rotina%20e%20solicitar%20um%20or%C3%A7amento%20personalizado%20da%20ELYA." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
           </div>
 
         </div>
@@ -149,7 +146,7 @@
               <tr>
                 <td class="feature-name">Necessidade personalizada</td>
                 <td>Rotina que exige escopo diferente, definido antes da contratação</td>
-                <td>Sob orçamento</td>
+                <td>A partir de R$ 300/mês por agenda adicional</td>
               </tr>
             </tbody>
           </table>
