@@ -884,10 +884,19 @@ section {
   height: 100%;
 }
 
+.plans-grid .plan-card.featured {
+  transform: none;
+}
+
+.plans-grid .plan-card.featured:hover {
+  transform: translateY(-10px);
+}
+
 .plans-grid .plan-card-header {
   display: flex;
   flex-direction: column;
-  min-height: 190px;
+  flex: 0 0 250px;
+  height: 250px;
 }
 
 .plans-grid .plan-price-personalized {
@@ -920,7 +929,8 @@ section {
   }
 
   .plans-grid .plan-card-header {
-    min-height: 0;
+    flex-basis: auto;
+    height: auto;
   }
 }
 
