@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.elyaassistente.com.br/</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/quem-somos.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/como-funciona.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/servicos.html</loc></url>
-  <url>
-    <loc>https://www.elyaassistente.com.br/planos.html</loc>
-    <lastmod>2026-07-30</lastmod>
-  </url>
-  <url><loc>https://www.elyaassistente.com.br/contato.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/faq.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/depoimentos.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/blog.html</loc></url>
-  <url><loc>https://www.elyaassistente.com.br/privacidade.html</loc></url>
+  <url><loc>https://www.elyaassistente.com.br/blog.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/como-funciona.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/compromisso-de-atendimento.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/confirmar-horario.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/contato.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/dados-do-agendamento.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/definir-disponibilidade.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/faq.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/manter-agenda-organizada.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/organizar-mensagens-whatsapp.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/planos.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/privacidade.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/quem-somos.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/responder-pedido-agendamento.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/servicos.html</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://www.elyaassistente.com.br/termos-de-uso.html</loc><lastmod>2026-11-22</lastmod></url>
 </urlset>

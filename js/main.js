@@ -47,13 +47,13 @@
     const banner = document.createElement('section');
     banner.className = 'cookie-banner';
     banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-modal', 'true');
+    banner.setAttribute('aria-modal', 'false');
     banner.setAttribute('aria-label', 'Preferências de privacidade');
     banner.innerHTML = `
       <div class="cookie-banner__content">
         <div>
           <strong>Privacidade e cookies</strong>
-          <p>Usamos cookies de medição para entender, de forma anônima, como o site é utilizado. O Analytics só será carregado se você aceitar. <a href="privacidade.html">Leia a Política de Privacidade</a>.</p>
+          <p>Usamos cookies de medição para entender como o site é utilizado. O Analytics só será carregado se você aceitar. <a href="privacidade.html">Leia a Política de Privacidade</a>.</p>
         </div>
         <div class="cookie-banner__actions">
           <button type="button" class="cookie-button cookie-button--secondary" data-cookie-choice="rejected">Recusar</button>
@@ -66,7 +66,7 @@
       if (!button) return;
 
       const choice = button.dataset.cookieChoice;
-      localStorage.setItem(consentKey, choice);
+      try { localStorage.setItem(consentKey, choice); } catch (_) { /* Apply for this visit. */ }
       applyConsent(choice);
       banner.remove();
     });
@@ -74,7 +74,8 @@
     document.body.appendChild(banner);
   };
 
-  const savedConsent = localStorage.getItem(consentKey);
+  let savedConsent = null;
+  try { savedConsent = localStorage.getItem(consentKey); } catch (_) { /* Consent remains optional. */ }
   if (savedConsent) {
     applyConsent(savedConsent);
   } else {
@@ -91,7 +92,7 @@
 
   document.addEventListener('click', (event) => {
     if (!event.target.closest('[data-cookie-settings]')) return;
-    localStorage.removeItem(consentKey);
+    try { localStorage.removeItem(consentKey); } catch (_) { /* No stored preference. */ }
     window.gtag('consent', 'update', { analytics_storage: 'denied' });
     showCookieBanner();
   });
@@ -154,21 +155,22 @@
   if (contactForm) {
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (!contactForm.reportValidity()) return;
 
       const formData = new FormData(contactForm);
       const businessSelect = contactForm.querySelector('[name="negocio"]');
       const businessLabel = businessSelect?.selectedOptions?.[0]?.textContent?.trim() || '';
       const message = [
-        'Ola! Quero solicitar um diagnostico gratuito para meu negocio.',
+        'Olá! Quero uma conversa inicial gratuita sobre minha agenda.',
         '',
         `Nome: ${formData.get('nome') || ''}`,
         `E-mail: ${formData.get('email') || ''}`,
         `Telefone/WhatsApp: ${formData.get('telefone') || ''}`,
-        `Tipo de negocio: ${businessLabel}`,
-        `Mensagem: ${formData.get('mensagem') || 'Nao informado'}`
+        `Tipo de negócio: ${businessLabel}`,
+        `Mensagem: ${formData.get('mensagem') || 'Não informado'}`
       ].join('\n');
 
-      window.open(`https://wa.me/5511913381160?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      window.location.assign(`https://wa.me/5511913381160?text=${encodeURIComponent(message)}`);
     });
   }
 })();
